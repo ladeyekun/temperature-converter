@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lateef Adeyekun">
+        <meta name="description" content="My web project">
+        <meta name="keywords" content="html, css, web, seo, web development">
+        <title>Temperature converter</title>
+        <link rel="icon" href="./assets/img/favicon.jpg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"
+        >
+        <link rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" 
+            media="all"
+        >
+        <link rel="stylesheet" href="./assets/css/style.css" media="all">
+        <script src="./assets/js/app.js" defer></script>
+    </head>
+    <body class="light-mode">
+        <header>
+            <div class="container flex flex-between">
+                <div class="title">
+                    <h2>Converter</h2>
+                </div>
+                <nav>
+                    <ul class="flex flex-end gap-10">
+                        <li>
+                            <a href="#">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#">About me</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>    
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="converter">
+                        <h1>Temperature converter</h1>
+                        <form name="converter-form" class="converter-form">
+                            <div class="form-group flex flex-between">
+                                <input 
+                                    type="text" 
+                                    class="temperature" 
+                                    placeholder="100"
+                                >
+                                <input
+                                    type="button"
+                                    class="convert"
+                                    value="Convert"
+                                >
+                            </div>
+                            <div class="form-group flex gap-10">
+                                <div class="radio-button">
+                                    <input
+                                        type="radio"
+                                        name="unit"
+                                        value="fahrenheit"
+                                        checked
+                                    >
+                                    <label for="fahrenheit">To Fahrenheit</label>
+                                </div>
+                                <div class="radio-button">
+                                    <input
+                                        type="radio"
+                                        name="unit"
+                                        value="celsius"
+                                    >
+                                    <label for="celsius">To Celsius</label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="result">
+                            <p></p>
+                        </div>
+                        <button class="background-toggler dark">Dark mode</button>            
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

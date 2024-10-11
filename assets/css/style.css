@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+
+:root {
+    --app-background-light: #efeef5;
+    --app-background-dark: #181721;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+body {
+    font-family: "Nunito Sans", "Noto Sans", Arial, sans-serif;
+    background-color: var(--app-background-light);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+    background-color: var(--app-background-dark);
+}
+
+a {
+    text-decoration: none;
+}
+/*----------------------------------*/
+/* Utilities                        */
+/*----------------------------------*/
+
+.flex {
+    display: flex;
+    place-items: center;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+
+/*----------------------------------*/
+/* Header                           */
+/*----------------------------------*/
+
+
+header {
+    height: 50px;
+    background-color: #682cc0;
+
+    .title {
+
+        h2 {
+            color: #e7ffe7;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                margin-right: 35px;
+                line-height: 50px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            a {
+                color: #e7ffe7;
+                transition: all 0.25s ease-in-out;
+            }
+
+            a:hover {
+                color: #f1e9e9;
+            }
+        }
+    }
+}
+
+/*----------------------------------*/
+/* Main                           */
+/*----------------------------------*/
+
+.converter {
+    width: 300px;
+    padding: 50px 0;
+
+    h1 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #181721;
+    }
+
+    form {
+        font-size: 12px;
+    }
+}
+
+body.dark-mode .converter h1 {
+    color: #efeef5;
+}
+
+input[type=text] {
+    width: 250px;
+    height: 40px;
+    padding: 0 15px 0 15px;
+    font-size: 12px;
+    color: #181721;
+    /*background-color: rgb(255 255 255 / 5%);*/
+    background-color: transparent;
+    border: 1px solid rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+body.dark-mode input[type=text]{
+    color: #efeef5;
+    border: 1px solid rgb(250 250 250 / 5%);
+}
+
+body.dark-mode input[type=radio], body.dark-mode label {
+    color: #efeef5;
+}
+
+input[type=radio] {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    color: #181721;
+}
+
+input[type=button] {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #efeef5;
+    border-radius: 5px;
+    background-color: #682cc0;
+    border: 1px solid #682cc0;
+    margin-left: 12px;
+}
+
+.result p {
+    margin: 20px auto 10px auto;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 15px;
+    background-color: rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    color: #181721;
+}
+
+body.dark-mode .result p {
+    background-color: rgb(255 255 255 / 5%);
+    color: #efeef5;
+}
+
+button {
+    font-size: 12px;
+    font-weight: 400px;
+    position: fixed;
+    inset: auto 40px 40px auto;
+    padding: 0 15px;
+    height: 30px;
+    border-radius: 25px;
+}
+
+.background-toggler {
+    background-color: #191720;
+    color: #efeef5;
+}
+
+body.dark-mode .background-toggler {
+    background-color: #efeef5;
+    color: #191720;
+}
+/*
+button.background-toggler {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+button.background-toggler.light {
+    background-color: var(--app-background-light);
+    color: #191720;
+}
+
+button.background-toggler.dark {
+    background-color: #191720;
+    color: var(--app-background-light);
+}
+*/
