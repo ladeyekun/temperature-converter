@@ -14,30 +14,29 @@ convert.addEventListener('click', function() {
     if (isNumber(data)) {
         let temp = parseFloat(data);
         let result = 0;
-        let symbol1 = '';
-        let symbol2 = '';
+        let symbol = '';
         
         switch (temperatureUnit) {
             case 'fahrenheit':
-                symbol1 = 'C';
-                symbol2 = 'F';
+                symbol = 'C';
                 result = calculateFahrenheit(temp);
                 break;
 
             case 'celsius':
             default:
-                symbol1 = 'F';
-                symbol2 = 'C'
+                symbol = 'F';
                 result = calculateCelsius(temp);
                 break;
         }
 
         output.innerHTML = 
-            `${data}&deg;${symbol1} = ${result.toFixed(1)}&deg;${symbol2}`;
+            `${data}&deg;${symbol} = ${result.toFixed(1)}&deg;${invertSymbol(symbol)}`;
     } else {
         output.innerText = 'Enter a valid number';
     }
 });
+
+const invertSymbol = symbol => symbol === 'F' ? 'C' : 'F';
 
 function isNumber(input) {
     if (input.length > 0 && !isNaN(input)) return true;
